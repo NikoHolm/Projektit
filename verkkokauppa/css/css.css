@@ -1,0 +1,222 @@
+/* Yleinen ulkoasu */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f1f1f1; /* Vaaleampi harmaa tausta */
+    font-family: 'Roboto', sans-serif; /* Moderni fontti */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    line-height: 1.6;
+    color: #2c3e50; /* Tumma teksti, parempi kontrasti */
+}
+
+/* Navigointipalkki */
+.navbar {
+    background-color: #34495e; /* Tumma harmaa tausta */
+    margin-bottom: 50px;
+    border-radius: 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.navbar a {
+    color: #ecf0f1; /* Vaalea teksti */
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 15px;
+}
+
+.navbar a:hover {
+    color: #3498db; /* Sininen hover-efekti */
+    background-color: #2c3e50;
+    border-radius: 5px;
+}
+
+/* Jumbotron (esittelyosio) */
+.jumbotron {
+    background-color: #34495e; /* Tumma harmaa tausta */
+    color: white;
+    margin-bottom: 0;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.jumbotron h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Varjostus otsikoille */
+}
+
+.jumbotron p {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+/* Button (pääpaino) */
+.btn-main {
+    background-color: #3498db; /* Sininen tausta */
+    color: white;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-main:hover {
+    background-color: #2980b9; /* Tummempi sininen hover */
+}
+
+/* Tuotteet */
+.tuote-rivi {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 40px 20px;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.tuote {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: calc(33.333% - 30px);
+    box-sizing: border-box;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.tuote:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.tuote img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.tuote h2 {
+    font-size: 1.6rem;
+    margin-top: 15px;
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+.tuote .price {
+    color: #3498db; /* Sininen hinta */
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.tuote a {
+    background-color: #3498db; /* Sininen tausta */
+    color: white;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.tuote a:hover {
+    background-color: #2980b9; /* Tummempi sininen hover-efekti */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Alennukset */
+.alennukset {
+    background-color: #ecf0f1; /* Vaalea tausta */
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.alennukset h2 {
+    color: #3498db; /* Sininen otsikko */
+    font-size: 2rem;
+}
+
+/* Footer */
+footer {
+    background-color: #34495e; /* Tumma harmaa tausta */
+    color: white;
+    padding: 50px 15px;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 1.2rem;
+}
+
+footer a {
+    color: #3498db; /* Sininen linkki */
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsiivisuus */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px;
+    }
+
+    .tuote-rivi {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tuote {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+
+/* Responsiivisuus pienille näytöille */
+@media (max-width: 640px) {
+    .tuote-rivi {
+        padding: 10px;
+    }
+}
+
+/* Animaatiot ja visuaaliset parannukset */
+.tuote, .btn-main, .navbar a {
+    transition: all 0.3s ease;
+}
+
+/* Hover-efekti tuotteille ja linkeille */
+.tuote:hover, .navbar a:hover, .btn-main:hover {
+    transform: translateY(-5px); /* Keveä nosto hoverilla */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Parannettu tekstin varjostus */
+h1, h2, h3 {
+    text-align: center;
+    color: #2c3e50;
+    font-weight: 700;
+    margin: 20px 0;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1); /* Pehmeä tekstin varjostus */
+}
+
+h1:hover, h2:hover, h3:hover {
+    color: #3498db;}

@@ -1,0 +1,152 @@
+footer {
+    background-color: #222; /* Tumma tausta */
+    color: #ecf0f1; /* Vaalea teksti */
+    padding: 40px 20px;
+    font-size: 0.9rem;
+    text-align: center;
+    margin-top: 50px;
+    border-top: 5px solid #3498db; /* Korostetaan footerin rajaa sinisellä */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.footer-logo {
+    flex: 1;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.footer-logo img {
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+.footer-logo p {
+    font-size: 1.2rem;
+    color: #3498db;
+}
+
+.footer-links,
+.footer-contact,
+.footer-phones {
+    flex: 1;
+    max-width: 250px;
+}
+
+.footer-links h3,
+.footer-contact h3,
+.footer-phones h3 {
+    font-size: 1.3rem;
+    color: #3498db;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.footer-links ul,
+.footer-contact ul,
+.footer-phones ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li,
+.footer-contact li,
+.footer-phones li {
+    margin-bottom: 10px;
+}
+
+.footer-btn {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #3498db;
+    color: white;
+    padding: 12px 25px;
+    font-weight: bold;
+    border-radius: 30px;
+    text-align: center;
+    font-size: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.footer-btn:hover {
+    background-color: #2980b9;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.footer-btn:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: -5px;
+    left: 0;
+    background-color: #fff;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.footer-btn:hover:after {
+    transform: scaleX(1);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #bdc3c7;
+    border-top: 1px solid #444;
+    padding-top: 20px;
+}
+
+.footer-bottom p {
+    margin: 10px 0;
+}
+
+.footer-extra-links a {
+    color: #3498db;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.footer-extra-links a:hover {
+    text-decoration: underline;
+}
+
+/* Responsiivisuus */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-logo {
+        text-align: center;
+    }
+
+    .footer-links, .footer-contact, .footer-phones {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .footer-btn {
+        margin-bottom: 15px;
+    }
+
+    .footer-extra-links {
+        text-align: center;
+    }
+}
